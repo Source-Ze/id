@@ -8,7 +8,7 @@
     "scrapper",
     "3"
   ],
-  "repository": "https://github.com/Source-Ze/id",
+  "repository": "https://github.com/Tepthonee/Scrap-Tep",
   "env": {
     "WEBHOOK": {
       "description": "لا تغيرهــا",
@@ -20,13 +20,18 @@
     "URL": {
       "description": "لا تغيرهــا",
       "value": "https://scraptep11.herokuapp.com/"
-    }
-  },
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "eco"
-    }
-  },
-  "stack": "heroku-22"
-}
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
